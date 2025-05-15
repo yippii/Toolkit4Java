@@ -20,7 +20,7 @@ public class Methods {
     private static void command(String arg) throws IOException {
         String[] command = {"bash", "-c", arg};
         Process a = new ProcessBuilder(command).start();
-        String line = null;
+        String line;
         BufferedReader is = new BufferedReader(new InputStreamReader(a.getInputStream()));
         while ((line = is.readLine()) != null) {
             System.out.println(line);
